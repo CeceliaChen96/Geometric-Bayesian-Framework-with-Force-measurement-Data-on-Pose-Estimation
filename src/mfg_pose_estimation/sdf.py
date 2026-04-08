@@ -1,0 +1,43 @@
+"""Superquadric field and stiffness helpers extracted from the notebook."""
+
+from .posterior_core import (
+    SuperquadricFieldParameters,
+    StiffnessParameters,
+    skew_cross_matrix,
+    smooth_abs_power,
+    superquadric_f_xy,
+    superquadric_F3d,
+    numerical_gradient_scalar_field,
+    numerical_hessian_scalar_field,
+    normalized_signed_field,
+    normalized_signed_field_gradient,
+    normalized_signed_field_hessian,
+    stiffness_k,
+    stiffness_k_prime,
+    stiffness_k_double_prime,
+    alpha_from_F_tilde,
+    kappa_from_F_tilde,
+    alpha_and_kappa_from_F_tilde,
+    local_stiffness_matrix,
+)
+
+__all__ = [
+    "SuperquadricFieldParameters",
+    "StiffnessParameters",
+    "skew_cross_matrix",
+    "smooth_abs_power",
+    "superquadric_f_xy",
+    "superquadric_F3d",
+    "numerical_gradient_scalar_field",
+    "numerical_hessian_scalar_field",
+    "normalized_signed_field",
+    "normalized_signed_field_gradient",
+    "normalized_signed_field_hessian",
+    "stiffness_k",
+    "stiffness_k_prime",
+    "stiffness_k_double_prime",
+    "alpha_from_F_tilde",
+    "kappa_from_F_tilde",
+    "alpha_and_kappa_from_F_tilde",
+    "local_stiffness_matrix",
+]
