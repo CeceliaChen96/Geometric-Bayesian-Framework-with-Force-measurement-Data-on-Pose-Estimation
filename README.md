@@ -143,8 +143,8 @@ Two physical experiment videos are available externally:
 - Probe experiment: <https://www.dropbox.com/scl/fi/gtrxmd8juf8imjyvv3u8k/probe.mp4?rlkey=90z5i6tph3a2qb54fm9tn9u8a&dl=0>
 - 22-observation experiment: <https://www.dropbox.com/scl/fi/xom30hqhicx03cz5dz5yv/22obs.mp4?rlkey=cgk04zerw2qg3xo8e0ptwkcys&dl=0>
 
-The corresponding numeric physical experiment data should be added under
-`data/real_experiments/` once finalized.
+The corresponding numeric physical experiment data is added under
+`data/real_experiments/`.
 
 ## Python Experiment Entry Points
 
@@ -180,11 +180,8 @@ The baseline comparison scripts are in:
 IEEE encourages authors to share code and data to improve reproducibility.
 The IEEE Control Systems Society author page for IEEE Transactions on Automatic
 Control also points authors to Code Ocean and IEEE DataPort. A GitHub link is
-therefore appropriate as a reproducibility resource, but it should be inserted
-into the paper only after author approval.
+therefore appropriate as a reproducibility resource in the manuscript.
 
-A draft "Code and data availability" sentence is provided in
-`docs/paper_repository_note.md`. It has not been inserted into the manuscript.
 
 ## Citation
 
