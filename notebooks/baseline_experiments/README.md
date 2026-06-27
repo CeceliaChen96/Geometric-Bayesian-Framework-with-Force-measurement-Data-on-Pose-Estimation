@@ -3,7 +3,7 @@
 This directory is intentionally separate from `TAC_template/root.tex` and
 `TAC_template/Supplementary_Material.tex`.
 
-It implements the B0--B5 baseline plan from `TAC_revision_guidance.tex`:
+It implements the B0--B5 baseline plan:
 
 - B0: initial / prior-mode pose.
 - B1: Lie-Gauss--Newton / Levenberg--Marquardt MAP baseline.
