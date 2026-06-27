@@ -40,7 +40,11 @@ python -m pip install -r requirements.txt
 python -m pip install -e .
 ```
 
-The code was organized for Python 3.10 or newer.
+The `requirements.txt` file provides the full reproducibility environment,
+including notebook support. For package-only use, install with
+`python -m pip install -e .`; for package plus notebook tools, install with
+`python -m pip install -e ".[notebook]"`. The code was organized for Python
+3.10 or newer.
 
 ## Quick Checks
 
