@@ -26,8 +26,7 @@ Not included:
 
 - The manuscript LaTeX source and submission files. Those remain outside the
   public reproducibility package.
-- Raw physical robot experiment data. The folder is prepared as a placeholder
-  and can be populated when the final data are available.
+- Raw physical robot experiment code.
 
 ## Setup
 
