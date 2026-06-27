@@ -12,6 +12,10 @@ Bayesian/
 # Jupyter
 .ipynb_checkpoints/
 *.nbconvert.ipynb
+*.ipynb.backup
+
+# Manuscript source kept outside the public reproducibility package
+notebooks/Jianyu + Cyrus/
 
 # macOS
 .DS_Store
@@ -28,6 +32,9 @@ dist/
 
 # Logs
 *.log
+
+# Generated demo outputs
+results/demo_runs/
 
 # Optional: large data and generated artifacts
 # data/

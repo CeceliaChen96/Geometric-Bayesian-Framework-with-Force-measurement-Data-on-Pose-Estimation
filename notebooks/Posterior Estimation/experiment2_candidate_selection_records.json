@@ -1,0 +1,335 @@
+[
+  {
+    "label": "sparse_baseline",
+    "geometry_design": "sparse_baseline",
+    "K": 10,
+    "pos_span": 0.010959610705495672,
+    "mean_ang_dist": "nan",
+    "s_rot": 4.49879769033153,
+    "rho": 14.092778121081388,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 4.88847804069519,
+    "params": null,
+    "status": "success"
+  },
+  {
+    "label": "direction_candidate_00",
+    "geometry_design": "direction_rich",
+    "K": 10,
+    "pos_span": 0.010959610705495672,
+    "mean_ang_dist": "nan",
+    "s_rot": 4.599496730837983,
+    "rho": 19.927594277511346,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 5.407041072845459,
+    "params": {
+      "yaw_halfspan_deg": 8.0,
+      "pitch_halfspan_deg": 5.0,
+      "roll_halfspan_deg": 2.0,
+      "pos_scale_xyz": [
+        0.004,
+        0.003,
+        0.0025
+      ],
+      "phase_mix": 0.8
+    },
+    "status": "success",
+    "candidate_type": "direction_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "direction_candidate_01",
+    "geometry_design": "direction_rich",
+    "K": 10,
+    "pos_span": 0.010843576527062939,
+    "mean_ang_dist": "nan",
+    "s_rot": 3.5603564588414884,
+    "rho": 19.307377527411287,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 4.70255708694458,
+    "params": {
+      "yaw_halfspan_deg": 10.0,
+      "pitch_halfspan_deg": 6.0,
+      "roll_halfspan_deg": 3.0,
+      "pos_scale_xyz": [
+        0.004,
+        0.003,
+        0.0025
+      ],
+      "phase_mix": 1.0
+    },
+    "status": "success",
+    "candidate_type": "direction_rich",
+    "pass_geom": false,
+    "pass_info": false,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "direction_candidate_02",
+    "geometry_design": "direction_rich",
+    "K": 10,
+    "pos_span": 0.011013758503748056,
+    "mean_ang_dist": "nan",
+    "s_rot": 2.2190315616053793,
+    "rho": 19.259219134189983,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 4.998192071914673,
+    "params": {
+      "yaw_halfspan_deg": 12.0,
+      "pitch_halfspan_deg": 8.0,
+      "roll_halfspan_deg": 4.0,
+      "pos_scale_xyz": [
+        0.004,
+        0.003,
+        0.0025
+      ],
+      "phase_mix": 1.1
+    },
+    "status": "success",
+    "candidate_type": "direction_rich",
+    "pass_geom": false,
+    "pass_info": false,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "direction_candidate_03",
+    "geometry_design": "direction_rich",
+    "K": 10,
+    "pos_span": 0.01090122045311087,
+    "mean_ang_dist": "nan",
+    "s_rot": 2.4426559978134628,
+    "rho": 19.253340692046944,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 5.181902885437012,
+    "params": {
+      "yaw_halfspan_deg": 14.0,
+      "pitch_halfspan_deg": 8.0,
+      "roll_halfspan_deg": 6.0,
+      "pos_scale_xyz": [
+        0.004,
+        0.003,
+        0.0025
+      ],
+      "phase_mix": 1.2
+    },
+    "status": "success",
+    "candidate_type": "direction_rich",
+    "pass_geom": false,
+    "pass_info": false,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "direction_candidate_04",
+    "geometry_design": "direction_rich",
+    "K": 10,
+    "pos_span": 0.011013758503748056,
+    "mean_ang_dist": "nan",
+    "s_rot": 3.2644305254145496,
+    "rho": 19.125588031098317,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 4.916114330291748,
+    "params": {
+      "yaw_halfspan_deg": 16.0,
+      "pitch_halfspan_deg": 10.0,
+      "roll_halfspan_deg": 8.0,
+      "pos_scale_xyz": [
+        0.004,
+        0.003,
+        0.0025
+      ],
+      "phase_mix": 1.1
+    },
+    "status": "success",
+    "candidate_type": "direction_rich",
+    "pass_geom": false,
+    "pass_info": false,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "direction_candidate_05",
+    "geometry_design": "direction_rich",
+    "K": 10,
+    "pos_span": 0.010825201978603502,
+    "mean_ang_dist": "nan",
+    "s_rot": 30.12181029673134,
+    "rho": 27.790633289597622,
+    "inner_conv": "9/10",
+    "all_inner": false,
+    "elapsed": 6.988461017608643,
+    "params": {
+      "yaw_halfspan_deg": 20.0,
+      "pitch_halfspan_deg": 12.0,
+      "roll_halfspan_deg": 8.0,
+      "pos_scale_xyz": [
+        0.004,
+        0.003,
+        0.0025
+      ],
+      "phase_mix": 1.3
+    },
+    "status": "success",
+    "candidate_type": "direction_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": false,
+    "pass_all": false
+  },
+  {
+    "label": "spatial_candidate_00",
+    "geometry_design": "spatial_rich",
+    "K": 10,
+    "pos_span": 0.015795568072479328,
+    "mean_ang_dist": "nan",
+    "s_rot": 11.242957667560816,
+    "rho": 16.432907494367658,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 8.003626823425293,
+    "params": {
+      "yaw_halfspan_deg": 6.0,
+      "pitch_halfspan_deg": 3.0,
+      "roll_halfspan_deg": 0.0,
+      "pos_scale_xyz": [
+        0.0055,
+        0.0045,
+        0.0035
+      ],
+      "phase_mix": 0.9
+    },
+    "status": "success",
+    "candidate_type": "spatial_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "spatial_candidate_01",
+    "geometry_design": "spatial_rich",
+    "K": 10,
+    "pos_span": 0.01770148235940865,
+    "mean_ang_dist": "nan",
+    "s_rot": 25.699909655521846,
+    "rho": 15.99301935344854,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 6.368584156036377,
+    "params": {
+      "yaw_halfspan_deg": 6.0,
+      "pitch_halfspan_deg": 3.0,
+      "roll_halfspan_deg": 0.0,
+      "pos_scale_xyz": [
+        0.0065,
+        0.005,
+        0.004
+      ],
+      "phase_mix": 1.0
+    },
+    "status": "success",
+    "candidate_type": "spatial_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "spatial_candidate_02",
+    "geometry_design": "spatial_rich",
+    "K": 10,
+    "pos_span": 0.020688389447193846,
+    "mean_ang_dist": "nan",
+    "s_rot": 14.386767689499148,
+    "rho": 16.93474000421866,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 8.550541162490845,
+    "params": {
+      "yaw_halfspan_deg": 6.0,
+      "pitch_halfspan_deg": 3.0,
+      "roll_halfspan_deg": 0.0,
+      "pos_scale_xyz": [
+        0.0075,
+        0.0058,
+        0.0045
+      ],
+      "phase_mix": 1.1
+    },
+    "status": "success",
+    "candidate_type": "spatial_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "spatial_candidate_03",
+    "geometry_design": "spatial_rich",
+    "K": 10,
+    "pos_span": 0.023289435471928032,
+    "mean_ang_dist": "nan",
+    "s_rot": 10.9403332262586,
+    "rho": 13.440016548474066,
+    "inner_conv": "10/10",
+    "all_inner": true,
+    "elapsed": 6.68599796295166,
+    "params": {
+      "yaw_halfspan_deg": 6.0,
+      "pitch_halfspan_deg": 3.0,
+      "roll_halfspan_deg": 0.0,
+      "pos_scale_xyz": [
+        0.0085,
+        0.0065,
+        0.005
+      ],
+      "phase_mix": 1.1
+    },
+    "status": "success",
+    "candidate_type": "spatial_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": true,
+    "pass_all": false
+  },
+  {
+    "label": "spatial_candidate_04",
+    "geometry_design": "spatial_rich",
+    "K": 10,
+    "pos_span": 0.02787801433288761,
+    "mean_ang_dist": "nan",
+    "s_rot": 12.085671410115907,
+    "rho": 11.0238626472915,
+    "inner_conv": "9/10",
+    "all_inner": false,
+    "elapsed": 8.038306951522827,
+    "params": {
+      "yaw_halfspan_deg": 6.0,
+      "pitch_halfspan_deg": 3.0,
+      "roll_halfspan_deg": 0.0,
+      "pos_scale_xyz": [
+        0.01,
+        0.008,
+        0.006
+      ],
+      "phase_mix": 1.1
+    },
+    "status": "success",
+    "candidate_type": "spatial_rich",
+    "pass_geom": false,
+    "pass_info": true,
+    "pass_health": false,
+    "pass_all": false
+  }
+]

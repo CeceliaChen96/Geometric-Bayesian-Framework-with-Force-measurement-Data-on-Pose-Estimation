@@ -16,11 +16,6 @@ from typing import Callable, List, Tuple, Optional
 
 @dataclass
 class Pose:
-    """
-    位姿 X = (R, p)
-    R: 3x3 旋转矩阵
-    p: 3 维平移向量
-    """
     R: np.ndarray   # shape (3,3)
     p: np.ndarray   # shape (3,)
 
@@ -45,7 +40,7 @@ class MFGParameters:
 @dataclass
 class SuperquadricFieldParameters:
     """
-    超二次隐式场参数
+    Superquadric implicit field parameters
     
     F_3d(x,y,z) = (f(x,y))^(eps2/eps1) + |z/a3|^(2/eps1) - 1
     f(x,y)      = |x/a1|^(2/eps2) + |y/a2|^(2/eps2)
@@ -61,7 +56,7 @@ class SuperquadricFieldParameters:
 @dataclass
 class StiffnessParameters:
     """
-    光滑刚度函数参数
+    Smooth stiffness function parameters
     
     k(d) = k_min + ((1 - tanh(d/d0))/2) * k_max
     """
@@ -72,7 +67,7 @@ class StiffnessParameters:
 
 def ensure_vector(x: np.ndarray, dim: int) -> np.ndarray:
     """
-    保证输入是指定长度的一维向量
+    Ensure input is a 1D vector of specified dimension.
     """
     x = np.asarray(x, dtype=float).reshape(-1)
     if x.shape[0] != dim:
@@ -82,7 +77,7 @@ def ensure_vector(x: np.ndarray, dim: int) -> np.ndarray:
 
 def ensure_matrix(x: np.ndarray, shape: Tuple[int, int]) -> np.ndarray:
     """
-    保证输入是指定大小的矩阵
+    Ensure input is a 2D array of specified shape.
     """
     x = np.asarray(x, dtype=float)
     if x.shape != shape:

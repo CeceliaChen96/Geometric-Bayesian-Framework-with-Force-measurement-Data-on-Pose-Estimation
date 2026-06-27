@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "K": 10,
+  "draws": 5,
+  "ess": 2.4099612240271155,
+  "map_eR": 0.26392987149373454,
+  "map_ep": 0.017156481798624015,
+  "weighted_mean_eR": 0.27792425077648153,
+  "weighted_mean_ep": 0.016797960019839638,
+  "mean_delta_norm": 0.054754234102940315,
+  "cov_relative_frobenius": 0.754494267694371,
+  "figure": "figures/B5_sampling_reference.pdf"
+}

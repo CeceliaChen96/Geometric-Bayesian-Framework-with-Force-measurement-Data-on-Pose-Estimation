@@ -1,11 +1,5 @@
 """Notebook-extracted core functions from Sampling.ipynb.
 
-This file is an initial migration artifact. The function bodies are copied from the
-notebook with minimal editing so the original logic stays intact. Higher-level
-modules such as sampling.py and plotting.py re-export selected symbols from here.
-
-Source notebook:
-- notebooks/sampling/Sampling.ipynb
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,11 +9,6 @@ from matplotlib.patches import Ellipse
 
 
 def canonicalize_quaternion(q: np.ndarray) -> np.ndarray:
-    """
-    将单位四元数做一个固定符号规范：
-    若 q0 < 0，则整体乘以 -1。
-    这样做不会改变对应的旋转矩阵，因为 q 和 -q 表示同一个旋转。
-    """
     q = np.asarray(q, dtype=float)
     q = q / np.linalg.norm(q)
     if q[0] < 0:
@@ -28,10 +17,6 @@ def canonicalize_quaternion(q: np.ndarray) -> np.ndarray:
 
 
 def quat_to_rot(q: np.ndarray) -> np.ndarray:
-    """
-    标量在前的单位四元数 q = [q0, q1, q2, q3]^T
-    转换为旋转矩阵 R \in SO(3)
-    """
     q = canonicalize_quaternion(q)
     q0, q1, q2, q3 = q
 
@@ -44,11 +29,6 @@ def quat_to_rot(q: np.ndarray) -> np.ndarray:
 
 
 def axis_angle_to_rot(axis: np.ndarray, angle: float) -> np.ndarray:
-    """
-    Rodrigues 公式：由轴角得到旋转矩阵。
-    axis: 3维旋转轴
-    angle: 旋转角（弧度）
-    """
     axis = np.asarray(axis, dtype=float)
     axis = axis / np.linalg.norm(axis)
     x, y, z = axis
@@ -66,7 +46,6 @@ def axis_angle_to_rot(axis: np.ndarray, angle: float) -> np.ndarray:
 
 def geodesic_distance_so3(R1: np.ndarray, R2: np.ndarray = None) -> float:
     """
-    SO(3) 上的测地距离：
         d(R1, R2) = arccos((trace(R1^T R2)-1)/2)
     """
     if R2 is None:
@@ -77,41 +56,32 @@ def geodesic_distance_so3(R1: np.ndarray, R2: np.ndarray = None) -> float:
 
 
 def proper_svd(F: np.ndarray):
-    """
-    稳健的 proper SVD:
-        F = U S V^T,
-        U, V in SO(3),
-        S = diag(s1, s2, s3)
-    其中 s3 允许带符号。
-
-    更稳健，因为它分别修正 U0 和 V0 的行列式，
-    而不是只看 det(U0 V0^T)。
-    """
+    
     U0, sigma, Vt0 = np.linalg.svd(F)
     V0 = Vt0.T
 
-    # 将数值行列式压成 ±1
+
     sign_u = 1.0 if np.linalg.det(U0) > 0 else -1.0
     sign_v = 1.0 if np.linalg.det(V0) > 0 else -1.0
 
     Du = np.diag([1.0, 1.0, sign_u])
     Dv = np.diag([1.0, 1.0, sign_v])
 
-    # 修正后 U, V 都落在 SO(3)
+
     U = U0 @ Du
     V = V0 @ Dv
 
-    # 保持 F = U S V^T
+    
     Sigma = np.diag(sigma)
     S = Du @ Sigma @ Dv
     s = np.diag(S).copy()
 
-    # 数值检查
+    
     tol = 1e-8
     if np.linalg.det(U) < 1 - tol or np.linalg.det(V) < 1 - tol:
         raise ValueError("proper SVD failed: U or V is not numerically in SO(3).")
 
-    # 再检查是否真的重构回去
+    
     err = np.linalg.norm(F - U @ S @ V.T, ord='fro')
     if err > 1e-8 * (1.0 + np.linalg.norm(F, ord='fro')):
         raise ValueError(f"proper SVD reconstruction failed, error = {err:.3e}")
@@ -120,20 +90,7 @@ def proper_svd(F: np.ndarray):
 
 
 def mf_diag_to_bingham_params(s: np.ndarray):
-    """
-    将标准化的 Matrix Fisher 参数 S=diag(s1,s2,s3)
-    转换为 S^3 上 Bingham 分布的参数。
 
-    先定义:
-        a0 = s1+s2+s3
-        a1 = s1-s2-s3
-        a2 = -s1+s2-s3
-        a3 = -s1-s2+s3
-
-    为了数值稳定，再做平移:
-        z_j = a_j - max(a)
-    于是 z_j <= 0
-    """
     s1, s2, s3 = s
     a = np.array([
         s1 + s2 + s3,
@@ -147,13 +104,7 @@ def mf_diag_to_bingham_params(s: np.ndarray):
 
 
 def build_acg_shape(z: np.ndarray, c: float = 1.0):
-    """
-    构造 ACG proposal 的 shape matrix K:
-        K = diag(kappa_0, ..., kappa_3),
-        kappa_j = c - z_j > 0
 
-    proposal 通过 y ~ N(0, K^{-1})，再归一化 q = y / ||y|| 生成。
-    """
     z = np.asarray(z, dtype=float)
     kappa = c - z
     if np.any(kappa <= 0):
@@ -165,11 +116,7 @@ def build_acg_shape(z: np.ndarray, c: float = 1.0):
 
 
 def sample_acg(Sigma_g: np.ndarray, rng: np.random.Generator) -> np.ndarray:
-    """
-    从 ACG proposal 中采样：
-        y ~ N(0, Sigma_g)
-        q = y / ||y||
-    """
+
     y = rng.multivariate_normal(mean=np.zeros(4), cov=Sigma_g)
     q = y / np.linalg.norm(y)
     q = canonicalize_quaternion(q)
@@ -177,19 +124,13 @@ def sample_acg(Sigma_g: np.ndarray, rng: np.random.Generator) -> np.ndarray:
 
 
 def log_target_bingham(q: np.ndarray, z: np.ndarray) -> float:
-    """
-    未归一化 log-target:
-        log \tilde{\pi}(q) = sum_j z_j q_j^2
-    """
+    
     q = canonicalize_quaternion(q)
     return float(np.dot(z, q * q))
 
 
 def log_proposal_acg(q: np.ndarray, K: np.ndarray) -> float:
-    """
-    未归一化 log-proposal:
-        log \tilde{g}(q) = -2 log(q^T K q)
-    """
+    
     q = canonicalize_quaternion(q)
     val = float(q @ K @ q)
     return float(-2.0 * np.log(val))
@@ -203,19 +144,7 @@ def sample_mf_so3_independence_mh(
     c: float = 1.0,
     seed: int = 42,
 ):
-    """
-    按照 Algorithm 1 进行采样：
-      1) proper SVD
-      2) 构造等价 Bingham target on S^3
-      3) 构造 ACG proposal
-      4) 使用 Independence MH
-      5) log-domain 接受判据
-      6) burn-in + thinning
-      7) q -> R0 -> R
-
-    返回:
-        一个 dict，包含采样结果和可视化所需的所有中间量。
-    """
+    
     rng = np.random.default_rng(seed)
 
     # ---------------------------
@@ -240,7 +169,7 @@ def sample_mf_so3_independence_mh(
     log_pi_current = log_target_bingham(q_current, z)
     log_g_current = log_proposal_acg(q_current, K)
 
-    # 用于保存完整链与诊断信息
+   
     chain_q = [q_current.copy()]
     chain_log_pi = [log_pi_current]
     accepted_flags = []
@@ -261,7 +190,7 @@ def sample_mf_so3_independence_mh(
         log_g_prop = log_proposal_acg(q_prop, K)
 
         # ---------------------------
-        # Step 6: log-domain 接受率
+        # Step 6: log-domain acceptance ratio   
         # Delta = log pi(q') - log pi(q^k) + log g(q^k) - log g(q')
         # 接受条件: log u <= min(0, Delta)
         # ---------------------------
@@ -322,9 +251,7 @@ def sample_mf_so3_independence_mh(
 
 
 def plot_unit_sphere(ax, alpha=0.08):
-    """
-    在 3D 坐标轴上画单位球面，用来展示 R0 e3 的落点分布。
-    """
+    
     u = np.linspace(0, 2*np.pi, 80)
     v = np.linspace(0, np.pi, 40)
     x = np.outer(np.cos(u), np.sin(v))
@@ -334,15 +261,7 @@ def plot_unit_sphere(ax, alpha=0.08):
 
 
 def visualize_mf_sampling(results: dict, max_scatter_points: int = 1500):
-    """
-    对采样结果进行可视化：
-    1. 四元数链 trace
-    2. running acceptance rate
-    3. 标准化样本 R0 到单位阵 I 的测地角直方图
-    4. R0 e3 在球面上的散点图
-
-    这里展示的标准化样本 R0，因为标准化后的目标分布对应 MF(S)。
-    """
+    
     chain_q = results["chain_q"]
     accepted_flags = results["accepted_flags"]
     stored_R0 = results["stored_R0"]
@@ -438,10 +357,7 @@ def visualize_mf_sampling(results: dict, max_scatter_points: int = 1500):
 
 
 def random_rotation(rng: np.random.Generator) -> np.ndarray:
-    """
-    生成一个随机旋转矩阵 Q \in SO(3)。
-    使用 QR 分解生成 Haar-like 随机旋转。
-    """
+    
     A = rng.normal(size=(3, 3))
     Q, _ = np.linalg.qr(A)
     if np.linalg.det(Q) < 0:
@@ -450,20 +366,13 @@ def random_rotation(rng: np.random.Generator) -> np.ndarray:
 
 
 def apply_rotations_to_vector(Rs: np.ndarray, v: np.ndarray) -> np.ndarray:
-    """
-    对一批旋转矩阵 Rs (shape = [N, 3, 3])，计算 Rs @ v。
-    返回 shape = [N, 3]。
-    """
+    
     v = np.asarray(v, dtype=float)
     return np.einsum("nij,j->ni", Rs, v)
 
 
 def rough_ess_1d(x: np.ndarray, max_lag: int = 200) -> float:
-    """
-    粗略估计一维时间序列的 ESS（有效样本量）。
-    这里使用简单的自相关积分近似。
-    注意：这是诊断量，不是严格统计推断工具。
-    """
+    
     x = np.asarray(x, dtype=float)
     n = len(x)
     if n < 5:
@@ -490,9 +399,7 @@ def rough_ess_1d(x: np.ndarray, max_lag: int = 200) -> float:
 
 
 def acceptance_quality_label(acc_rate: float) -> str:
-    """
-    根据接受率给一个粗略标签。
-    """
+    
     if acc_rate < 0.05:
         return "poor"
     elif acc_rate < 0.15:
@@ -509,11 +416,7 @@ def plot_sphere_scatter(ax, pts: np.ndarray, title: str,
                         mode_point: np.ndarray = None,
                         max_points: int = 1200,
                         marker_size: int = 10):
-    """
-    在单位球面上画散点。
-    pts: shape = [N, 3]
-    mode_point: 可选，画出 mode 对应的方向点
-    """
+    
     plot_unit_sphere(ax, alpha=0.08)
 
     pts = np.asarray(pts, dtype=float)
@@ -566,17 +469,6 @@ def plot_sphere_scatter(ax, pts: np.ndarray, title: str,
 
 
 def visualize_single_case_v2(results: dict, max_scatter_points: int = 1200):
-    """
-    单个 F 的更完整可视化：
-    1) 四元数 trace
-    2) running acceptance rate
-    3) d(R0, I) 直方图
-    4) R0 e3 在球面上的散点图
-    5) 恢复后的 R e3 在球面上的散点图
-    6) d(R, R_mode) 直方图 + ESS
-
-    这里 R_mode = U V^T 是 MF(F) 的 mode。
-    """
     chain_q = results["chain_q"]
     accepted_flags = results["accepted_flags"]
     stored_R0 = results["stored_R0"]
@@ -677,10 +569,7 @@ def visualize_single_case_v2(results: dict, max_scatter_points: int = 1200):
 
 
 def visualize_recovered_axes(results: dict, max_scatter_points: int = 1000):
-    """
-    额外：把恢复后的 R 对三个基向量 e1,e2,e3 的作用都画出来。
-    比只看 R e3 更完整。
-    """
+    
     stored_R = results["stored_R"]
     U = results["U"]
     V = results["V"]
@@ -723,17 +612,7 @@ def run_family_experiment(
     seed: int = 123,
     randomize_mode: bool = False,
 ):
-    """
-    运行一组不同 F 的采样实验。
-
-    参数说明：
-    - s_list: 一组奇异值列表，每个元素形如 [s1,s2,s3]
-    - randomize_mode=False: 所有 F 共享同一个 mode（更适合对比 concentration/anisotropy）
-    - randomize_mode=True: 每个 F 都随机生成自己的 U,V（更接近“随机取 F”）
-
-    返回：
-    - family_results: 一个列表，每个元素都是 sample_mf_so3_independence_mh 的输出
-    """
+    
     rng = np.random.default_rng(seed)
 
     if s_list is None:
@@ -781,11 +660,7 @@ def run_family_experiment(
 
 
 def plot_family_results(family_results, vector=np.array([0.0, 0.0, 1.0]), max_points: int = 900):
-    """
-    画一系列不同 F 的对比图：
-    上排：恢复后 R v 的球面散点图
-    下排：d(R, R_mode) 的直方图
-    """
+    
     m = len(family_results)
     fig = plt.figure(figsize=(4.3 * m, 8))
     gs = fig.add_gridspec(2, m)
@@ -830,9 +705,7 @@ def plot_family_results(family_results, vector=np.array([0.0, 0.0, 1.0]), max_po
 
 
 def print_family_summary(family_results):
-    """
-    打印每个 F 的诊断摘要。
-    """
+    
     print("=" * 90)
     print("Family experiment summary")
     print("=" * 90)
@@ -855,10 +728,13 @@ def print_family_summary(family_results):
 
 def main_family_demo():
     """
-    这个 demo 会完成：
-    1) 一个单独的 F，画更完整的单案例图（包含恢复后的 R）
-    2) 固定 mode，只改变奇异值 s，观察 concentration 的变化
-    3) 随机选择不同 F，观察恢复后 R 的分布变化
+    This demo will accomplish the following:
+
+    1) Draw a more complete single-case plot (including the restored R) for a single function F.
+
+    2) With a fixed mode, only change the singular value s and observe the change in concentration.
+
+    3) Randomly select different functions F and observe the distribution changes of the restored R.
     """
 
     
@@ -1158,7 +1034,7 @@ def plot_partB_angle_boxplot(family_fixed, use_common_reference=True):
 
 def cartesian_to_lon_lat(points: np.ndarray):
     """
-    将球面点 points (N,3) 转成经纬度：
+    Convert the spherical points (N,3) to latitude and longitude:
         lon in [-pi, pi]
         lat in [-pi/2, pi/2]
     """
@@ -1172,8 +1048,8 @@ def cartesian_to_lon_lat(points: np.ndarray):
 
 def spherical_density_histogram(points: np.ndarray, n_lon: int = 72, n_lat: int = 36):
     """
-    对球面点做面积修正后的二维密度直方图。
-    返回：
+    Create a two-dimensional density histogram for spherical points with area correction.
+    Returns:
         density: shape [n_lat, n_lon]
         lon_edges
         lat_edges
@@ -1201,9 +1077,7 @@ def spherical_density_histogram(points: np.ndarray, n_lon: int = 72, n_lat: int 
 def plot_single_axis_heatmap(ax, points: np.ndarray, mode_point: np.ndarray,
                              title: str, n_lon: int = 72, n_lat: int = 36,
                              cmap: str = "viridis"):
-    """
-    画单个轴方向的球面密度热图（经纬度展开）。
-    """
+    
     density, lon_edges, lat_edges = spherical_density_histogram(points, n_lon=n_lon, n_lat=n_lat)
 
     im = ax.pcolormesh(
@@ -1238,9 +1112,7 @@ def plot_single_axis_heatmap(ax, points: np.ndarray, mode_point: np.ndarray,
 
 def visualize_axis_density_heatmaps(results: dict, n_lon: int = 72, n_lat: int = 36,
                                     cmap: str = "viridis"):
-    """
-    对单个 results 画 Re1, Re2, Re3 的球面密度热图。
-    """
+    
     stored_R = results["stored_R"]
     U = results["U"]
     V = results["V"]
@@ -1280,9 +1152,7 @@ def visualize_axis_density_heatmaps(results: dict, n_lon: int = 72, n_lat: int =
 
 def compare_re3_density_heatmaps_across_family(family_results, n_lon: int = 72, n_lat: int = 36,
                                                cmap: str = "viridis"):
-    """
-    对 family_results 做对比：只画 Re3 的密度热图，便于比较不同参数下的分布变化。
-    """
+    
     m = len(family_results)
     fig, axes = plt.subplots(1, m, figsize=(4.5 * m, 4.2))
 
@@ -1407,16 +1277,21 @@ def project_to_so3(R: np.ndarray) -> np.ndarray:
 
 def log_map_so3(R: np.ndarray, eps: float = 1e-10) -> np.ndarray:
     """
-    计算 SO(3) 上相对于单位阵的 log-map:
-        xi = log(R)^vee in R^3
+    Calculate the log-map on SO(3) relative to the identity matrix:
 
-    返回 rotation vector xi，满足 ||xi|| = rotation angle.
-    对于当前 Matrix-Fisher 样本，这个实现已经足够稳健。
+    xi = log(R)^vee in R^3
 
-    数值策略：
-    - 小角度时用一阶近似
-    - 一般角度时用标准公式
-    - 接近 pi 时用对角元恢复旋转轴
+    Return the rotation vector xi, satisfying ||xi|| = rotation angle.
+
+    This implementation is robust enough for the current Matrix-Fisher sample.
+
+    Numerical strategies:
+
+    - Use a first-order approximation for small angles
+
+    - Use the standard formula for general angles
+
+    - Recover the rotation axis using diagonal elements when approaching pi
     """
     R = project_to_so3(R)
 
@@ -1483,8 +1358,8 @@ def tangent_vectors_about_mode(Rs: np.ndarray, R_mode: np.ndarray) -> np.ndarray
 
 def covariance_ellipse_params(X2: np.ndarray, n_std: float = 2.0):
     """
-    对二维点云 X2 (N x 2)，计算协方差椭圆参数：
-    椭圆中心、宽、高、旋转角度。
+    For a 2D point cloud X2 (N x 2), compute the covariance ellipse parameters:
+    ellipse center, width, height, rotation angle.
     """
     mu = np.mean(X2, axis=0)
     C = np.cov(X2.T)
@@ -1544,8 +1419,8 @@ def plot_tangent_space_3d(Xi: np.ndarray, title: str = None, max_points: int = 2
 
 def plot_tangent_pairwise(Xi: np.ndarray, n_std: float = 2.0, max_points: int = 2500):
     """
-    图 2：pairwise 2D tangent-space scatter + covariance ellipse
-    展示 anisotropy 最直观。
+    Figure 2: Pairwise 2D tangent-space scatter + covariance ellipse
+    Visualizes anisotropy most intuitively.
     """
     Xi_plot = Xi.copy()
     if Xi_plot.shape[0] > max_points:
@@ -1600,7 +1475,7 @@ def plot_tangent_pairwise(Xi: np.ndarray, n_std: float = 2.0, max_points: int = 
 
 def summarize_tangent_cloud(Xi: np.ndarray):
     """
-    输出 tangent cloud 的统计摘要，用于解释 anisotropy。
+    Output the statistical summary of the tangent cloud, used to explain anisotropy.
     """
     mu = np.mean(Xi, axis=0)
     C = np.cov(Xi.T)
@@ -1625,8 +1500,8 @@ def summarize_tangent_cloud(Xi: np.ndarray):
 
 def visualize_tangent_space_for_results(results: dict, max_points: int = 2500):
     """
-    对某个已有采样结果 results（即 sample_mf_so3_independence_mh 的输出）
-    直接生成 log-map / tangent-space 可视化。
+    Visualize the tangent space for a given set of sampling results (i.e., the output of sample_mf_so3_independence_mh).
+    Directly generate log-map / tangent-space visualizations.
     """
     Rs = results["stored_R"]
     U = results["U"]
@@ -1652,9 +1527,9 @@ def visualize_tangent_space_for_results(results: dict, max_points: int = 2500):
 
 def compare_tangent_space_across_family(family_results, max_points: int = 1800):
     """
-    对一组 family_results 做并排对比：
-    每个 case 画一个 xi1-xi2 平面图（带协方差椭圆），
-    方便直接比较 anisotropy / concentration 的变化。
+    Compare the tangent space across a family of results:
+    For each case, plot a xi1-xi2 plane (with covariance ellipse),
+    making it easy to directly compare changes in anisotropy / concentration.
     """
     m = len(family_results)
     fig, axes = plt.subplots(1, m, figsize=(4.3 * m, 4.6))
@@ -1706,7 +1581,7 @@ def compare_tangent_space_across_family(family_results, max_points: int = 1800):
 
 def gaussian_kde_1d(samples: np.ndarray, grid: np.ndarray, bandwidth: float = None):
     """
-    一个不依赖 scipy 的简单 1D Gaussian KDE.
+    A simple 1D Gaussian KDE implementation that does not depend on scipy.
     samples: shape [N]
     grid: shape [M]
     """
@@ -1735,12 +1610,12 @@ def plot_family_angle_density_curves(
     title: str = None
 ):
     """
-    将 family_results 中每个 case 的角距离分布合并到一张平滑密度曲线图中。
+    Merge the angle distance distributions of each case in family_results into a single smooth density curve.
 
     use_mode_distance=True:
-        画 d(R, R_mode)
+        Plot d(R, R_mode)
     use_mode_distance=False:
-        画 d(R0, I)
+        Plot d(R0, I)
     """
     all_angles = []
 

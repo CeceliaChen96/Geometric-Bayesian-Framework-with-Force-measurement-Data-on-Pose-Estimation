@@ -1,0 +1,232 @@
+[
+  {
+    "case": "mild_beta05",
+    "seed": 43,
+    "beta": 0.5,
+    "c_kappa": 1.0,
+    "c_Lambda": 1.0,
+    "K": 10,
+    "K_max": 24,
+    "n_outer_iterations": 1,
+    "posterior_trace_states": 1,
+    "stop_reason": "no candidate survived posterior health check",
+    "elapsed_sec": 156.31003379821777,
+    "init_eR": 0.06577938303515435,
+    "init_ep": 0.003648629879831605,
+    "alg1_eR": 0.12344971290092827,
+    "alg1_ep": 0.0105100478124702,
+    "alg2_eR": 0.06577938303515435,
+    "alg2_ep": 0.003648629879831605,
+    "rho_alg1": 22.606577544836146,
+    "rho_alg2": 22.606577544836146,
+    "s_rot_alg1": 41.57738698811995,
+    "s_rot_alg2": 41.57738698811995,
+    "final_cond_peak_mean_deg": 10.211783360939243,
+    "final_cond_peak_max_deg": 12.444444444444446,
+    "final_cond_peak_distances_deg": [
+      6.222222222222223,
+      11.96868341615106,
+      12.444444444444446
+    ],
+    "final_cond_peak_uv_deg": [
+      [
+        3.7333333333333343,
+        -4.977777777777778
+      ],
+      [
+        -11.822222222222223,
+        -1.8666666666666671
+      ],
+      [
+        9.955555555555556,
+        7.466666666666669
+      ]
+    ],
+    "final_cond_ess_ratio": 0.0013126183263999453,
+    "final_cond_acceptance_rate": 0.4158823529411765
+  },
+  {
+    "case": "mild_beta05",
+    "seed": 45,
+    "beta": 0.5,
+    "c_kappa": 1.0,
+    "c_Lambda": 1.0,
+    "K": 10,
+    "K_max": 24,
+    "n_outer_iterations": 1,
+    "posterior_trace_states": 1,
+    "stop_reason": "no candidate survived posterior health check",
+    "elapsed_sec": 153.26807308197021,
+    "init_eR": 0.06577938303515435,
+    "init_ep": 0.003648629879831605,
+    "alg1_eR": 0.06900503404831011,
+    "alg1_ep": 0.010694891835623747,
+    "alg2_eR": 0.06577938303515435,
+    "alg2_ep": 0.003648629879831605,
+    "rho_alg1": 22.043621593792068,
+    "rho_alg2": 22.043621593792068,
+    "s_rot_alg1": 41.57738698811995,
+    "s_rot_alg2": 41.57738698811995,
+    "final_cond_peak_mean_deg": 10.219744092089153,
+    "final_cond_peak_max_deg": 12.08137021090073,
+    "final_cond_peak_distances_deg": [
+      9.059692306660198,
+      12.08137021090073,
+      9.51816975870653
+    ],
+    "final_cond_peak_uv_deg": [
+      [
+        2.4888888888888876,
+        8.711111111111109
+      ],
+      [
+        9.955555555555556,
+        6.8444444444444485
+      ],
+      [
+        -9.333333333333332,
+        1.8666666666666671
+      ]
+    ],
+    "final_cond_ess_ratio": 0.0007258273259289713,
+    "final_cond_acceptance_rate": 0.4304411764705882
+  },
+  {
+    "case": "mild_beta05",
+    "seed": 44,
+    "beta": 0.5,
+    "c_kappa": 1.0,
+    "c_Lambda": 1.0,
+    "K": 10,
+    "K_max": 24,
+    "n_outer_iterations": 1,
+    "posterior_trace_states": 1,
+    "stop_reason": "no candidate survived posterior health check",
+    "elapsed_sec": 140.43672895431519,
+    "init_eR": 0.06577938303515435,
+    "init_ep": 0.003648629879831605,
+    "alg1_eR": 0.13757642420411514,
+    "alg1_ep": 0.01113289651768793,
+    "alg2_eR": 0.06577938303515435,
+    "alg2_ep": 0.003648629879831605,
+    "rho_alg1": 22.98081713627783,
+    "rho_alg2": 22.98081713627783,
+    "s_rot_alg1": 41.57738698811995,
+    "s_rot_alg2": 41.57738698811995,
+    "final_cond_peak_mean_deg": 10.401547045205275,
+    "final_cond_peak_max_deg": 12.947605717937215,
+    "final_cond_peak_distances_deg": [
+      8.301479862123053,
+      9.955555555555556,
+      12.947605717937215
+    ],
+    "final_cond_peak_uv_deg": [
+      [
+        8.088888888888889,
+        -1.8666666666666671
+      ],
+      [
+        -9.955555555555556,
+        0.0
+      ],
+      [
+        7.466666666666669,
+        10.577777777777776
+      ]
+    ],
+    "final_cond_ess_ratio": 0.0012021604422603007,
+    "final_cond_acceptance_rate": 0.42308823529411765
+  },
+  {
+    "case": "mild_beta05",
+    "seed": 42,
+    "beta": 0.5,
+    "c_kappa": 1.0,
+    "c_Lambda": 1.0,
+    "K": 10,
+    "K_max": 24,
+    "n_outer_iterations": 1,
+    "posterior_trace_states": 1,
+    "stop_reason": "no candidate survived posterior health check",
+    "elapsed_sec": 156.39031600952148,
+    "init_eR": 0.06577938303515435,
+    "init_ep": 0.003648629879831605,
+    "alg1_eR": 0.10950781110028168,
+    "alg1_ep": 0.010526928459533218,
+    "alg2_eR": 0.06577938303515435,
+    "alg2_ep": 0.003648629879831605,
+    "rho_alg1": 21.693461182726274,
+    "rho_alg2": 21.693461182726274,
+    "s_rot_alg1": 41.57738698811995,
+    "s_rot_alg2": 41.57738698811995,
+    "final_cond_peak_mean_deg": 12.53082710733728,
+    "final_cond_peak_max_deg": 15.555555555555555,
+    "final_cond_peak_distances_deg": [
+      9.955555555555556,
+      12.08137021090073,
+      15.555555555555555
+    ],
+    "final_cond_peak_uv_deg": [
+      [
+        9.955555555555556,
+        0.0
+      ],
+      [
+        -11.822222222222223,
+        2.4888888888888876
+      ],
+      [
+        9.333333333333336,
+        12.444444444444443
+      ]
+    ],
+    "final_cond_ess_ratio": 0.00017949056680227108,
+    "final_cond_acceptance_rate": 0.42264705882352943
+  },
+  {
+    "case": "mild_beta05",
+    "seed": 46,
+    "beta": 0.5,
+    "c_kappa": 1.0,
+    "c_Lambda": 1.0,
+    "K": 10,
+    "K_max": 24,
+    "n_outer_iterations": 1,
+    "posterior_trace_states": 1,
+    "stop_reason": "no candidate survived posterior health check",
+    "elapsed_sec": 162.88043189048767,
+    "init_eR": 0.06577938303515435,
+    "init_ep": 0.003648629879831605,
+    "alg1_eR": 0.14416836216739815,
+    "alg1_ep": 0.010391410065473035,
+    "alg2_eR": 0.06577938303515435,
+    "alg2_ep": 0.003648629879831605,
+    "rho_alg1": 22.182990567837138,
+    "rho_alg2": 22.182990567837138,
+    "s_rot_alg1": 41.57738698811995,
+    "s_rot_alg2": 41.57738698811995,
+    "final_cond_peak_mean_deg": 12.96038080838015,
+    "final_cond_peak_max_deg": 16.427138040374867,
+    "final_cond_peak_distances_deg": [
+      16.427138040374867,
+      14.365115495876688,
+      8.08888888888889
+    ],
+    "final_cond_peak_uv_deg": [
+      [
+        6.8444444444444485,
+        14.933333333333337
+      ],
+      [
+        4.355555555555554,
+        13.68888888888889
+      ],
+      [
+        -3.1111111111111107,
+        7.466666666666669
+      ]
+    ],
+    "final_cond_ess_ratio": 0.000321981643227401,
+    "final_cond_acceptance_rate": 0.4188235294117647
+  }
+]

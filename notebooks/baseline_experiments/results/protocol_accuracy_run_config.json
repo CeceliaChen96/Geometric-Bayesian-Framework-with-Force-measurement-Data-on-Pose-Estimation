@@ -1,0 +1,16 @@
+{
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "max_iter": 6,
+  "elapsed_sec": 131.20662249997258,
+  "protocol_notebook": "/Users/cecelia/Documents/AAA_NTU/AAA_Research/Done/Bayesian_MFG/mfg_posterior_project/mfg_github/notebooks/Posterior Estimation/Revised5_Multiseed_forEx2C_b_main_plot.ipynb",
+  "saved_proposed_files": [
+    "/Users/cecelia/Documents/AAA_NTU/AAA_Research/Done/Bayesian_MFG/mfg_posterior_project/mfg_github/notebooks/Posterior Estimation/exp2C_initialization_prior_mismatch_records.json",
+    "/Users/cecelia/Documents/AAA_NTU/AAA_Research/Done/Bayesian_MFG/mfg_posterior_project/mfg_github/notebooks/Posterior Estimation/new_exp2CB_false_confidence_seed45_46_sweep_records.json"
+  ]
+}

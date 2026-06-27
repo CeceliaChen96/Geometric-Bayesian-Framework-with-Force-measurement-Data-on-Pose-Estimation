@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\caption{Frozen-chart drift diagnostic for the sparse-baseline setting.}
+\label{tab:supp_chart_drift_diagnostic}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabular}{c c c c c c c c c}
+\toprule
+Seed & Final state & \(\rho\) & \(s_{\rm rot}\) & \(\delta_J\) & \(\eta_J\) & \(\max_t\eta_J\) & \(\kappa(J_\nu)\) & \(\kappa(J_{\nu,\rm post})\) \\
+\midrule
+42 & 15 & \(12.293\) & \(2.69{\times}10^{-2}\) & \(1.596\) & \(1.897\) & \(3.368\) & \(1.115\) & \(1.118\) \\
+43 & 15 & \(15.234\) & \(2.94{\times}10^{1}\) & \(1.587\) & \(2.238\) & \(3.369\) & \(1.022\) & \(1.681\) \\
+44 & 15 & \(15.339\) & \(3.99{\times}10^{1}\) & \(2.357\) & \(3.193\) & \(3.780\) & \(1.037\) & \(1.927\) \\
+\midrule
+Mean \(\pm\) std & -- & \(14.288\pm1.729\) & \(23.116\pm20.673\) & \(1.847\pm0.442\) & \(2.443\pm0.672\) & \(3.506\pm0.238\) & \(1.058\pm0.050\) & \(1.575\pm0.415\) \\
+\bottomrule
+\end{tabular}
+\vspace{0.5ex}
+\begin{minipage}{0.98\textwidth}
+\footnotesize
+\emph{Note:} The diagnostic uses the saved Algorithm~2 posterior traces for the sparse-baseline setting with \(K_{\rm eff}=10\), \((\beta,c_\kappa,c_\Lambda)=(1,1,1)\), and seeds \(42,43,44\). Here \(\delta_J:=\|J_{\nu,\rm post}-J_\nu\|_F/\|J_\nu\|_F\) and \(\eta_J:=\|J_\nu^{-1}(J_{\nu,\rm post}-J_\nu)\|_2\). Values of \(\eta_J\) above one indicate that the sufficient small-drift condition used to compare the self-consistent and frozen-chart coupling reconstructions is not satisfied along these traces; the frozen chart is therefore used as the stable computational rule rather than forcing an in-pass chart refresh.
+\end{minipage}
+\end{table*}
