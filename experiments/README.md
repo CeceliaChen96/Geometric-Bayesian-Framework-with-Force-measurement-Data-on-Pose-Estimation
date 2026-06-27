@@ -47,6 +47,5 @@ This script calls the package demos in `scripts/` and writes demo outputs under
 ## Notes
 
 - These scripts read generated records from `data/generated/`.
-- They do not modify the original notebooks.
-- They do not modify manuscript files.
+
 
