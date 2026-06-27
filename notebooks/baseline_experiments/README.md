@@ -15,16 +15,17 @@ It implements the B0--B5 baseline plan:
 Outputs are written under:
 
 - `results/`: JSON/CSV records.
-- `figures/`: generated plots.
-- `baseline_results.tex` and `baseline_results.pdf`: standalone report.
+
+Generated plots and standalone TeX/PDF reports are intentionally not kept in
+the GitHub-facing repository. They can be regenerated locally from the scripts
+when needed.
 
 The lightweight smoke-test script imports the existing local `posterior_core.py`
 directly; the protocol script loads the saved Experiment 2C notebook
 definitions.  Neither script touches the manuscript files.
 
-The current `baseline_results.tex` / `baseline_results.pdf` report is the
-accuracy-centered protocol baseline generated with the two fairness schemes
-requested for revision:
+The accuracy-centered protocol baseline can be regenerated with the two fairness
+schemes requested for revision:
 
 ```bash
 MPLCONFIGDIR=/private/tmp python baseline_experiments/code/run_protocol_accuracy_baselines.py \
@@ -46,8 +47,6 @@ The A/B protocol outputs are:
 - `results/scheme_ab_accuracy_records.{json,csv}`: per-seed records.
 - `results/scheme_ab_accuracy_summary.{json,csv}`: mean/std summary tables.
 - `results/scheme_ab_accuracy_run_config.json`: command and source metadata.
-- `figures/scheme_A_accuracy_improvement.pdf` and
-  `figures/scheme_B_accuracy_improvement.pdf`: accuracy plots.
 
 The earlier lightweight B0--B5 smoke-test driver remains available as:
 
