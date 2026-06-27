@@ -7,8 +7,8 @@ project:
 
 The code implements Matrix-Fisher Gaussian (MFG) posterior approximation and
 residual-safeguarded refinement for wrench-based pose estimation on
-`SO(3) x R^3`. It also includes the notebooks and saved outputs used for the
-synthetic experiments, baseline comparisons, diagnostics, and paper figures.
+`SO(3) x R^3`. The GitHub-facing entry points are Python scripts; the notebooks
+are kept as experiment provenance and development records.
 
 ## Repository Scope
 
@@ -16,7 +16,8 @@ Included:
 
 - Python package code in `src/mfg_pose_estimation/`.
 - Lightweight runnable demos in `scripts/`.
-- Development and paper-experiment notebooks in `notebooks/`.
+- Python reproducibility entry points in `experiments/`.
+- Development and paper-experiment notebooks in `notebooks/` for provenance.
 - Generated synthetic-experiment data in `data/generated/`.
 - Generated figures and notebook outputs kept in their original locations.
 - Placeholders and links for physical robot experiment data and videos.
@@ -44,6 +45,18 @@ The code was organized for Python 3.10 or newer.
 
 ## Quick Checks
 
+Create a manifest of the generated data:
+
+```bash
+python experiments/make_data_manifest.py
+```
+
+Create a compact paper-result summary from saved generated records:
+
+```bash
+python experiments/summarize_paper_results.py
+```
+
 Run a lightweight Algorithm 1 demo:
 
 ```bash
@@ -64,6 +77,13 @@ python scripts/run_sampling_demo.py
 
 These commands write outputs under `results/demo_runs/`.
 
+You can also run both lightweight package demos through the Python-first
+experiment wrapper:
+
+```bash
+python experiments/run_smoke_demos.py
+```
+
 ## Main Directories
 
 ```text
@@ -73,6 +93,10 @@ src/mfg_pose_estimation/
 
 scripts/
   Small package-based demos for Algorithm 1, Algorithm 2, and sampling.
+
+experiments/
+  Python-first reproducibility entry points for generated-data manifests,
+  paper-result summaries, and smoke demos.
 
 notebooks/Posterior Estimation/
   Main synthetic experiment notebooks and generated outputs for the paper.
@@ -111,6 +135,8 @@ The consolidated data folders contain JSON, CSV, NPZ, and NPY files only. Large
 figures and plots are kept in their original `notebooks/` or `results/`
 locations.
 
+Python-generated summaries are written to `results/python_summaries/`.
+
 ## Physical Robot Experiment Videos
 
 Two physical experiment videos are available externally:
@@ -120,6 +146,17 @@ Two physical experiment videos are available externally:
 
 The corresponding numeric physical experiment data should be added under
 `data/real_experiments/` once finalized.
+
+## Python Experiment Entry Points
+
+For GitHub readers, start with the Python scripts in `experiments/`:
+
+- `experiments/make_data_manifest.py`
+- `experiments/summarize_paper_results.py`
+- `experiments/run_smoke_demos.py`
+
+These scripts read the generated records, create reproducibility summaries, or
+run lightweight package demos without modifying the notebooks.
 
 ## Paper Notebooks
 

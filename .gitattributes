@@ -1,0 +1,19 @@
+# Make the GitHub project read as Python-first while retaining notebooks as
+# reproducibility/provenance artifacts.
+*.ipynb linguist-documentation=true
+
+# Generated experiment outputs should not dominate language statistics.
+*.pdf linguist-generated=true
+*.png linguist-generated=true
+*.jpg linguist-generated=true
+*.jpeg linguist-generated=true
+*.npy linguist-generated=true
+*.npz linguist-generated=true
+
+data/generated/** linguist-generated=true
+notebooks/**/*.json linguist-generated=true
+notebooks/**/*.csv linguist-generated=true
+notebooks/baseline_experiments/results/** linguist-generated=true
+notebooks/diagnostics/*_records.csv linguist-generated=true
+notebooks/diagnostics/*_summary.csv linguist-generated=true
+notebooks/diagnostics/*_summary.json linguist-generated=true

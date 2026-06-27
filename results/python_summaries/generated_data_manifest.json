@@ -1,0 +1,485 @@
+[
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/baseline_main_records.csv",
+    "sha256": "dcb7bd85a395830e73ad24cb2b21c636bbf9eff60d5949ec1d9756eaa2a13524",
+    "size_bytes": 1346
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/baseline_main_records.json",
+    "sha256": "7e59b5f3566c5787e8592e46257697eb4f14233470703c5ff094b3cfc18b54f5",
+    "size_bytes": 2776
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/baseline_main_summary.csv",
+    "sha256": "5e3b98195d91e8c4f9cdb9adb6cf599c4697c669d00ad3ab403aa8f2ef58f960",
+    "size_bytes": 1673
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/baseline_main_summary.json",
+    "sha256": "3f3d2565e540df163fdabd76783261905426d1dd8f88da2f565c9b87ae46e350",
+    "size_bytes": 4127
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/baseline_sampling_reference.json",
+    "sha256": "c500037c24fd66767f98b69bee353b8a2a0968a94b031917565b98d627ec0787",
+    "size_bytes": 363
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/baseline_selection_records.csv",
+    "sha256": "d5e13179939da4adf2b1162122baea7ade3081772d00d582adee30a5750d5c67",
+    "size_bytes": 1204
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/baseline_selection_records.json",
+    "sha256": "d3a05ba0b7145ce030c6a33d9a6d954352709c04a1dab998793807b2abd0628c",
+    "size_bytes": 2363
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/baseline_selection_summary.csv",
+    "sha256": "ca93d12859c17818c5a4bd47dfdec780b43602e82eccec5df326925d9cd4e01a",
+    "size_bytes": 1514
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/baseline_selection_summary.json",
+    "sha256": "c59f2c94a045a2b168446d6730e3d2d55cce5c1545c41e63dcfba4729b14ee31",
+    "size_bytes": 3488
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/protocol_accuracy_records.csv",
+    "sha256": "964acc36786ae6328ea8120a6d0a9b5e09fa70dd81c6cbf55a7c3001fafd2ad5",
+    "size_bytes": 5153
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/protocol_accuracy_records.json",
+    "sha256": "37f771419dbe7396a36f19fce22e49816262eb2a6d870797ba0b2f5dee9c8709",
+    "size_bytes": 11556
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/protocol_accuracy_run_config.json",
+    "sha256": "6cf3ddc0c3be1cba0af035fc4af924ad5eca69e2fcc4b959463db219ebe18d17",
+    "size_bytes": 720
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/protocol_accuracy_summary.csv",
+    "sha256": "b7a5fc371efcecc9dcfa23a8d156beeb8e884912bae4e5c6ee6c7756905b6c03",
+    "size_bytes": 1913
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/protocol_accuracy_summary.json",
+    "sha256": "8abc0758762f42acbd8cefc2c830c58a61d60731d04ffa456b0e14cd97289bef",
+    "size_bytes": 4059
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/run_config.json",
+    "sha256": "959861c71cb65292d1b38ad375fe993772b7e3f2b6ccaad98c1be2e876d774c4",
+    "size_bytes": 349
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/scheme_ab_accuracy_records.csv",
+    "sha256": "34aac8fb8e53404ceacaa51750447575de739495e93acb66b81ada0c482b7360",
+    "size_bytes": 10284
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/scheme_ab_accuracy_records.json",
+    "sha256": "7aa58ea0f07b2f04650cf9b2fad35385868430dd4b8075a156cc71e1f4c07ba9",
+    "size_bytes": 24374
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/scheme_ab_accuracy_run_config.json",
+    "sha256": "60dbb2b5c4287b17d4c5dddbf970545dd72953a61a329ac4d4f3ea5331060404",
+    "size_bytes": 734
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".csv",
+    "path": "data/generated/baseline_experiments/scheme_ab_accuracy_summary.csv",
+    "sha256": "2e57be94cff629ef2e0b990be209f1ce9a6a2f35b6251b72b1fecf009714eb9c",
+    "size_bytes": 3564
+  },
+  {
+    "category": "baseline_experiments",
+    "extension": ".json",
+    "path": "data/generated/baseline_experiments/scheme_ab_accuracy_summary.json",
+    "sha256": "5c0c50e8dd2866ece2f71fa63a081bd6d3691f8a2969696b0cb784bb3d093901",
+    "size_bytes": 8486
+  },
+  {
+    "category": "diagnostics",
+    "extension": ".csv",
+    "path": "data/generated/diagnostics/chart_drift_diagnostic_records.csv",
+    "sha256": "544587f7c471eb3b2402d2191f7d11280c65782e3e4957036c64ac62aa893eab",
+    "size_bytes": 8684
+  },
+  {
+    "category": "diagnostics",
+    "extension": ".csv",
+    "path": "data/generated/diagnostics/chart_drift_diagnostic_summary.csv",
+    "sha256": "c03ba6c2c970e3b45f5028985cdaf24e36d43b95de35bb7769ffd1fdd6323fde",
+    "size_bytes": 630
+  },
+  {
+    "category": "diagnostics",
+    "extension": ".json",
+    "path": "data/generated/diagnostics/chart_drift_diagnostic_summary.json",
+    "sha256": "f7acc886b76547787e102e6e74aa488e34f5bd9924ad28b818af7277ce19b921",
+    "size_bytes": 1220
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp1_multiseed_nested_K_aggregate_records.json",
+    "sha256": "6fd36badb64597a4e258d6370e1a9cfa91eaac86ce37f7e82849c2263b286f55",
+    "size_bytes": 11613
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp1_multiseed_nested_K_records_3seeds.json",
+    "sha256": "d6706100ef46709c159ea26a92acf4a70cfb4696ce3c86fb9b4ff7585fcea456",
+    "size_bytes": 26237
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp1_multiseed_nested_K_records_partial.json",
+    "sha256": "d6706100ef46709c159ea26a92acf4a70cfb4696ce3c86fb9b4ff7585fcea456",
+    "size_bytes": 26237
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp1_sparse_K_algorithmic_validation_records.json",
+    "sha256": "8e8157504dda86dd19dc349a8d8d3862c5b96465e3a06930e28bc7929e11c5e0",
+    "size_bytes": 5620
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp1_standalone_sparse_K_ablation_records.json",
+    "sha256": "21deeaea8e4d42b5e2384ce9a4e60949bf983de549074d2db92e7d81ce9659d7",
+    "size_bytes": 5269
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2A_noise_robustness_records.json",
+    "sha256": "d45cb53a4460bac0f9c158700dc70bc6962e26240cfc98017a1251e3f2ef6065",
+    "size_bytes": 12714
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2A_noise_robustness_summary.json",
+    "sha256": "a05c5c480cbade0e156073a9caa0e0e8011bd054bbf255a9a7de3e65c5e99f19",
+    "size_bytes": 3636
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2B_noise_model_mismatch_records.json",
+    "sha256": "902141ffa862e44cb279c9a1868cfb49088399ffbb0f1d198ddcb88410636f0c",
+    "size_bytes": 15087
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2B_noise_model_mismatch_summary.json",
+    "sha256": "35e756e8bcd90cd03d655fd7f5c2f21d1bee84f01d988f560af6aa834497d44e",
+    "size_bytes": 4931
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npz",
+    "path": "data/generated/posterior_estimation/exp2CB_false_confidence_seed44_F_sequence.npz",
+    "sha256": "5bf345684f2fcac00c18f3ff35ae98a3622f509c93db70122b10fab2919b85a3",
+    "size_bytes": 2356
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npz",
+    "path": "data/generated/posterior_estimation/exp2CB_false_confidence_seed44_F_snapshots_for_MF_visualization.npz",
+    "sha256": "9a27cc07aa57e0991ad60ae32eaeeaccb8ca9d9eb604d8ca388528c01a022443",
+    "size_bytes": 2066
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2CB_false_confidence_seed44_posterior_trace_records.json",
+    "sha256": "32895a63bc6168dbde6f3c83392006c1e5deb8ba4ee0491193fd39c6ccab24db",
+    "size_bytes": 15260
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npz",
+    "path": "data/generated/posterior_estimation/exp2CB_mild_seed44_F_sequence.npz",
+    "sha256": "1ef588ae2e2b8faec2e8d119899e596d777a3c8e2cf11bde2ab0cb23dfeffd35",
+    "size_bytes": 2620
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npz",
+    "path": "data/generated/posterior_estimation/exp2CB_mild_seed44_F_snapshots_for_MF_visualization.npz",
+    "sha256": "f2de84939c7f3437ada97d22cc0cf8801f90ba944dcc41ae846d428cd4531bcf",
+    "size_bytes": 2066
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2CB_mild_seed44_posterior_trace_records.json",
+    "sha256": "5a39be306d763ffb38ff10625d00061087377a42aef06157073435edd271087e",
+    "size_bytes": 17759
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2C_initialization_prior_mismatch_records.json",
+    "sha256": "bc129397b37fc113d2607249502158aeed521db1e75b354fa5efa1f9f14b949a",
+    "size_bytes": 11668
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/exp2C_initialization_prior_mismatch_summary.json",
+    "sha256": "9d741169915ef035f3181ad51b08737a968fad36216bc8f1a8ff696536d09390",
+    "size_bytes": 4384
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/experiment2_candidate_selection_records.json",
+    "sha256": "fba7dbcf65d17ee45d6a1efe46725ef605cbbed229681f231db266166a85e405",
+    "size_bytes": 7982
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npy",
+    "path": "data/generated/posterior_estimation/experiment2_outputs_partial.npy",
+    "sha256": "82361ec055376dc382390d69745793c1e624f131b70af0be8a060a4cf4ea81f1",
+    "size_bytes": 128
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/experiment2_records_partial.json",
+    "sha256": "8034783b7d9a4a17153e249d36887b6db3030c32f3ff9f683427ff3335387483",
+    "size_bytes": 2845
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/experiment2_records_tableIV_protocol_info_guided.json",
+    "sha256": "5f5c4e67a7a3d2510302e6c604ba92856ddb9e011fbad95b880be4f691c29841",
+    "size_bytes": 3287
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npz",
+    "path": "data/generated/posterior_estimation/new_exp2CB_false_confidence_seed44_F_sequence.npz",
+    "sha256": "48690b0a60394707db0f8ae815b3c9fa3d4e4c9c1089cd82485b2da10f12b84c",
+    "size_bytes": 2620
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".npz",
+    "path": "data/generated/posterior_estimation/new_exp2CB_false_confidence_seed44_F_snapshots_for_MF_visualization.npz",
+    "sha256": "2938db47aa355e6abde71f4019c0c90613bde2a4521ab232ce3ff967091cfd0e",
+    "size_bytes": 2066
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_false_confidence_seed44_posterior_trace_records.json",
+    "sha256": "5cd53504acba58242959f6ac96d676d4fd82e307b71874aa1f080bf0420e7455",
+    "size_bytes": 17790
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_false_confidence_seed45_46_sweep_records.json",
+    "sha256": "223df16c21325a9dd9a0f6ca2a361ccb677af76c62e4657c18f33c426211af6d",
+    "size_bytes": 1213
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_false_confidence_seed46_posterior_trace_records.json",
+    "sha256": "e68311ebdf7e47b27f42082dd450f242a69fb9b1c1c71c21d1424014ed54eacf",
+    "size_bytes": 12617
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_false_confidence_seed_selection_summary.json",
+    "sha256": "79b44d25eb6d40a283285e1413e2d15718c6b0e0603876c424724bf0af5888da",
+    "size_bytes": 6015
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed42_posterior_trace_records.json",
+    "sha256": "3a45c28714e69d2d2ba3ffbb727bbb35996be9d090c1e4f631c7defa3fd71d81",
+    "size_bytes": 2488
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed43_posterior_trace_records.json",
+    "sha256": "d05318b66f9c5fc12877914d969f02fd7e8e8a176fc30b5af347c932e20dc4ca",
+    "size_bytes": 2483
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed44_posterior_trace_records.json",
+    "sha256": "e60aa4368034ae53612e9dfb5684cea7df840164a11286be1cfe9dd186e43e57",
+    "size_bytes": 2482
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed45_posterior_trace_records.json",
+    "sha256": "4b0c9f420935e94baed37822f40aeb0731a2d118585632b3bb2825f2a3da6e47",
+    "size_bytes": 2487
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed46_posterior_trace_records.json",
+    "sha256": "cf9ffb7e383b235630e1ed56a7fa7f6b546053518f255511d0289864223f51d8",
+    "size_bytes": 2483
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed_selection_summary.json",
+    "sha256": "79c5392ab010c1d9a79545ded02c8efafcf141bd26c165b4b27a054a403aab31",
+    "size_bytes": 8102
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta05_seed_sweep_records.json",
+    "sha256": "946adb9299eeddc159bd98495e98ab6446f78bf4aad5d14ee7bb690bad472580",
+    "size_bytes": 6233
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed42_conditional_diagnostics.json",
+    "sha256": "150a1bf957c952de2b3e81d36b7f4061074a7e2aecae485d9eda5ac2f575f26f",
+    "size_bytes": 1750
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed42_posterior_trace_records.json",
+    "sha256": "9c8781429a5326c7d2f2fd6c169c48a960374407df986d2a1c10cfc74ec6cd70",
+    "size_bytes": 39921
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed43_posterior_trace_records.json",
+    "sha256": "d772ed253a001ccd4f408d90d5bdc48f3ea61a30fcbdb9250c87b70dedaafff4",
+    "size_bytes": 39980
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed44_posterior_trace_records.json",
+    "sha256": "e2f24ffd9ca5c3eebfa2e05ee5f785416fe39fc883c7cc2bd4e9981b57bb2a99",
+    "size_bytes": 39961
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed45_posterior_trace_records.json",
+    "sha256": "6e885f3f11de82df684ad259717ecbd62bbbb0a23f2df7a7dd4559c8f17390c1",
+    "size_bytes": 39991
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed46_posterior_trace_records.json",
+    "sha256": "6c4a0975c6dc3eed2517ecb25a067212315e810299f0fd0c495bc6bef3cde3cd",
+    "size_bytes": 39977
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed_selection_summary.json",
+    "sha256": "c90a8ec5e0235d9d4f2f1e8e23d33909d9976e7f29a5ed7df0bf0be140e69b51",
+    "size_bytes": 7905
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed_sweep_records.json",
+    "sha256": "7746ae8a60d964bafafa0fb3eab6735db0080024859d9acad06dfb7cd976d08f",
+    "size_bytes": 6077
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_T15_seed_sweep_records_partial.json",
+    "sha256": "7746ae8a60d964bafafa0fb3eab6735db0080024859d9acad06dfb7cd976d08f",
+    "size_bytes": 6077
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_seed42_posterior_trace_records.json",
+    "sha256": "5c9279c07e402993e0094d6f1a8013eed2f0aa0a788d0a1c08f148fa9511118e",
+    "size_bytes": 52413
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/new_exp2CB_mild_beta1_seed43_posterior_trace_records.json",
+    "sha256": "96222ca11aa755d9e9e8872c8ffa12a2f1288a79111ec76e62c388c9cc5f5b9f",
+    "size_bytes": 52487
+  },
+  {
+    "category": "posterior_estimation",
+    "extension": ".json",
+    "path": "data/generated/posterior_estimation/prop34_nested_k_sweep_records.json",
+    "sha256": "18e36e2405723f48dcc7fbc85ada012405f9415b7f481d8d29bbfead1169d954",
+    "size_bytes": 4097
+  }
+]
