@@ -20,12 +20,11 @@ Included:
 - Development and paper-experiment notebooks in `notebooks/` for provenance.
 - Generated synthetic-experiment data in `data/generated/`.
 - Generated figures and notebook outputs kept in their original locations.
-- Placeholders and links for physical robot experiment data and videos.
+- Links for physical robot experiment videos and resulted data.
 
 Not included:
 
-- The manuscript LaTeX source and submission files. Those remain outside the
-  public reproducibility package.
+- The manuscript LaTeX source and files. 
 - Raw physical robot experiment code.
 
 ## Setup
