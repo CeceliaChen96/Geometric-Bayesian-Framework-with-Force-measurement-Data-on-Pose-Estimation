@@ -7,10 +7,12 @@
 *.png linguist-generated=true
 *.jpg linguist-generated=true
 *.jpeg linguist-generated=true
+*.mat binary linguist-generated=true
 *.npy linguist-generated=true
 *.npz linguist-generated=true
 
 data/generated/** linguist-generated=true
+data/real_experiments/** linguist-generated=true
 notebooks/**/*.json linguist-generated=true
 notebooks/**/*.csv linguist-generated=true
 notebooks/baseline_experiments/results/** linguist-generated=true

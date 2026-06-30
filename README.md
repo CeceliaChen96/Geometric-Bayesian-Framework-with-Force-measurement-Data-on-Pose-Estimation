@@ -118,8 +118,8 @@ data/generated/
   GitHub readers without changing the original notebook output paths.
 
 data/real_experiments/
-  Placeholder for physical robot experiment data. This directory is currently
-  intentionally empty except for its README.
+  Physical robot experiment data. The current raw MATLAB data file is
+  `raw_exp_data.mat`; see the directory README for variable definitions.
 
 results/paper_figures/
   Generated paper figures from the package-level experiments.
@@ -140,15 +140,25 @@ locations.
 
 Python-generated summaries are written to `results/python_summaries/`.
 
-## Physical Robot Experiment Videos
+## Physical Robot Experiment Data and Videos
+
+The physical robot experiment data are provided in
+`data/real_experiments/raw_exp_data.mat`, a MATLAB v5 file with synchronized
+time-series arrays:
+
+- `all_send_u`: commanded input/probing signal `X_U`, shape `(12, 118150)`.
+- `all_wrench_ATI`: force and torque measurements, shape `(6, 118150)`.
+- `time_step`: timestamps, shape `(1, 118150)`.
+- `robot_pose`: robot end-effector position/pose variable `X_Z`, shape
+  `(6, 118150)`.
+- `robot_joint`: robot joint positions, shape `(7, 118150)`.
 
 Two physical experiment videos are available externally:
 
 - Probe experiment: <https://www.dropbox.com/scl/fi/gtrxmd8juf8imjyvv3u8k/probe.mp4?rlkey=90z5i6tph3a2qb54fm9tn9u8a&dl=0>
 - 22-observation experiment: <https://www.dropbox.com/scl/fi/xom30hqhicx03cz5dz5yv/22obs.mp4?rlkey=cgk04zerw2qg3xo8e0ptwkcys&dl=0>
 
-The corresponding numeric physical experiment data is added under
-`data/real_experiments/`.
+The numeric physical experiment data are stored under `data/real_experiments/`.
 
 ## Python Experiment Entry Points
 
