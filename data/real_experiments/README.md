@@ -23,4 +23,4 @@ The second dimension indexes synchronized time samples.
 External videos:
 
 - Probe experiment: <https://www.dropbox.com/scl/fi/gtrxmd8juf8imjyvv3u8k/probe.mp4?rlkey=90z5i6tph3a2qb54fm9tn9u8a&dl=0>
-- 22-observation experiment: <https://www.dropbox.com/scl/fi/xom30hqhicx03cz5dz5yv/22obs.mp4?rlkey=cgk04zerw2qg3xo8e0ptwkcys&dl=0>
+- Observation experiment: <https://www.dropbox.com/scl/fi/xom30hqhicx03cz5dz5yv/22obs.mp4?rlkey=cgk04zerw2qg3xo8e0ptwkcys&dl=0>
